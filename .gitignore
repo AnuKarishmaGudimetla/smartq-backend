@@ -1,36 +1,69 @@
-HELP.md
+# ------------------------
+# Maven / Build artifacts
+# ------------------------
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
 
-### STS ###
+# keep the Maven wrapper JAR (if you want the wrapper itself versioned)
+!.mvn/wrapper/maven-wrapper.jar
+
+# ------------------------
+# Eclipse / STS
+# ------------------------
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
-.sts4-cache
+.sts4-cache/
 
-### IntelliJ IDEA ###
-.idea
+# ------------------------
+# IntelliJ IDEA
+# ------------------------
+.idea/
 *.iws
 *.iml
 *.ipr
 
-### NetBeans ###
+# ------------------------
+# NetBeans
+# ------------------------
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
+# ------------------------
+# VS Code
+# ------------------------
 .vscode/
-# Optional: Ignore all .properties files in resources
-src/main/resources/*.properties
 
+# ------------------------
+# Docker
+# ------------------------
+# (if you have a local Docker Compose file, ignore env files, etc.)
+*.env.local
+docker-compose.*.yml
+
+# ------------------------
+# Environment files & secrets
+# ------------------------
+# real Spring properties (ignored)
+src/main/resources/application.properties
+
+# local .env (ignored, you'll import it into Render)
+.env
+
+# ------------------------
+# Committed templates
+# ------------------------
+# allow committing the example/template
+!src/main/resources/application-example.properties
+
+# ------------------------
+# Misc
+# ------------------------
+*.log
+*.tmp
