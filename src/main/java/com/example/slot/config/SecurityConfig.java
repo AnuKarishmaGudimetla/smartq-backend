@@ -81,8 +81,8 @@ public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration config = new CorsConfiguration();
     config.setAllowedOrigins(List.of(
         "http://localhost:3000",
-        "https://smartq-frontend.vercel.app", // ✅ already present
-        "https://smartq-frontend-o4o3wwwik-gudimetla-anu-karishmas-projects.vercel.app" // ✅ ADD THIS
+        "https://smartq-frontend.vercel.app", 
+        "https://smartq-frontend-1kyhy7emb-gudimetla-anu-karishmas-projects.vercel.app"
     ));
     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
     config.setAllowedHeaders(List.of("*"));
